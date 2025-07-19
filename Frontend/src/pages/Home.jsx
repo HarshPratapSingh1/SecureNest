@@ -99,7 +99,7 @@ function Home() {
       >
         {/* Main Card */}
         <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg p-10 text-center max-w-xl w-full">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to CloudDrive</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to SecureNest</h1>
           <p className="text-gray-600 mb-8">Securely store, access, and share your files in the cloud.</p>
 
           <div className="flex justify-center gap-6">
