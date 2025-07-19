@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import MyGallery from './pages/MyGallery'
 
 function App() {
+  axios.defaults.withCredentials = true;
   return (
     // <Router>
       <Routes>
