@@ -10,7 +10,7 @@ const MyGallery = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/mygallery", { withCredentials: true })
+      .get("https://securenest-t72z.onrender.com/mygallery", { withCredentials: true })
       .then((res) => {
         if (Array.isArray(res.data)) setImages(res.data);
       })
@@ -25,7 +25,7 @@ const MyGallery = () => {
   const handleDelete = async (url) => {
     try {
       const res = await axios.delete(
-        `http://localhost:5000/delete?url=${encodeURIComponent(url)}`,
+        `https://securenest-t72z.onrender.com/delete?url=${encodeURIComponent(url)}`,
         { withCredentials: true }
       );
 
@@ -130,7 +130,7 @@ const MyGallery = () => {
 
             <div className="text-center">
               <a
-                href={`http://localhost:5000/download?url=${encodeURIComponent(
+                href={`https://securenest-t72z.onrender.com/download?url=${encodeURIComponent(
                   modalImage
                 )}`}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded"

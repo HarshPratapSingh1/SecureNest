@@ -13,7 +13,7 @@ function Home() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:5000/profile", {
+        const res = await fetch("https://securenest-t72z.onrender.com/profile", {
           method: "GET",
           credentials: "include",
         });
@@ -37,7 +37,7 @@ function Home() {
   }, [navigate]);
 
   const handleLogout = async () => {
-    await fetch("http://localhost:5000/logout", {
+    await fetch("https://securenest-t72z.onrender.com/logout", {
       method: "GET",
       credentials: "include",
     });
@@ -58,7 +58,7 @@ function Home() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:5000/upload", {
+      const res = await fetch("https://securenest-t72z.onrender.com/upload", {
         method: "POST",
         body: formData,
         credentials: "include",
