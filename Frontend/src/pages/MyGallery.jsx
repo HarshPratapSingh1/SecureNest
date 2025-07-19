@@ -50,7 +50,7 @@ const MyGallery = () => {
       className="min-h-screen bg-cover bg-center flex items-center justify-center py-10 px-4"
       style={{
         backgroundImage:
-          "url('storage.jpg')",
+          "url('/storage.jpg')",
       }}
     >
       <div className="backdrop-blur-md bg-white/80 rounded-xl shadow-lg p-10 w-full max-w-6xl">
