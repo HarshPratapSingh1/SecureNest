@@ -8,7 +8,7 @@ const MyGallery = () => {
   const [modalImage, setModalImage] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useEffect(() => { 
     axios
       .get("https://securenest-t72z.onrender.com/mygallery", { withCredentials: true })
       .then((res) => {
@@ -50,7 +50,7 @@ const MyGallery = () => {
       className="min-h-screen bg-cover bg-center flex items-center justify-center py-10 px-4"
       style={{
         backgroundImage:
-          "url('https://private-user-images.githubusercontent.com/133925969/468240144-887f3049-d577-47c7-a56c-0c2fd0e632bc.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI4ODU3MDAsIm5iZiI6MTc1Mjg4NTQwMCwicGF0aCI6Ii8xMzM5MjU5NjkvNDY4MjQwMTQ0LTg4N2YzMDQ5LWQ1NzctNDdjNy1hNTZjLTBjMmZkMGU2MzJiYy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcxOVQwMDM2NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNjRjYTAyOGI4ZmRmNGRmYjRiYzk5MzJmZmQzNmYxMDM1Mjc1YjU1YTc1MTIwNTEyMzdjMTU2NTc0YzdhYWVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.TcjPuJoYrZZoB88nx3yeVhusaDX7po42VGvpmHbS3v0')",
+          "url('/screenshots/storage.jpg')",
       }}
     >
       <div className="backdrop-blur-md bg-white/80 rounded-xl shadow-lg p-10 w-full max-w-6xl">

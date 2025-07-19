@@ -17,7 +17,6 @@ function Home() {
           method: "GET",
           credentials: "include",
         });
-        // console.log(res);
         if (res.status === 401) {
           navigate("/login");
         } else if (res.ok) {
@@ -95,7 +94,7 @@ function Home() {
         className="min-h-screen bg-cover bg-center flex items-center justify-center relative"
         style={{
           backgroundImage:
-            "url('https://private-user-images.githubusercontent.com/133925969/468239147-909242cf-d477-4422-b7c7-3cc8d9adc4d7.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTI4ODQ4MjcsIm5iZiI6MTc1Mjg4NDUyNywicGF0aCI6Ii8xMzM5MjU5NjkvNDY4MjM5MTQ3LTkwOTI0MmNmLWQ0NzctNDQyMi1iN2M3LTNjYzhkOWFkYzRkNy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcxOVQwMDIyMDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wY2Q2NTg5MjdkY2QzZjFmNzQ1ZmMyYTFmYTk3NjQzYTkxYzdiNmU4YmNhNDYwMWM3MTY2YzA3ZjNiYWJmZmUzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Ty_Hap7WrQUJ_iUQco_76n9as0nanEpQh1JKY9xYaZ8')",
+            "url('/screenshots/front.jpg')",
         }}
       >
         {/* Main Card */}
