@@ -26,6 +26,7 @@ router.get('/home', isAuth, async (req, res) => {
 router.get('/mygallery', isAuth, async (req, res) => {
   try {
     const user = await User.findById(req.user.userId);
+    console.log(user);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
     res.json(user.uploads || []);
