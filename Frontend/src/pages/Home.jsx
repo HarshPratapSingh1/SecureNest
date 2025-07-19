@@ -94,7 +94,7 @@ function Home() {
         className="min-h-screen bg-cover bg-center flex items-center justify-center relative"
         style={{
           backgroundImage:
-            "url('/screenshots/front.jpg')",
+            "url('front.jpg')",
         }}
       >
         {/* Main Card */}
