@@ -72,4 +72,4 @@ Harsh Pratap Singh
 ![Register](screenshots/register.png)
 ![Login](screenshots/login.png)
 ![Home](screenshots/home.png)
-![My Gallery](screenshots/register.png)
+![My Gallery](screenshots/mygal.png.png)
