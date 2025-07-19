@@ -5,6 +5,7 @@ import Index from './pages/Index'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import MyGallery from './pages/MyGallery'
+import axios from 'axios'
 
 function App() {
   axios.defaults.withCredentials = true;
