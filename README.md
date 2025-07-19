@@ -69,7 +69,7 @@ Harsh Pratap Singh
 
 
 📷 Screenshots
-![alt text](image-3.png)
-![alt text](image-2.png)
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](./ScreenShots/image-3.png)
+![alt text](./ScreenShots/image-2.png)
+![alt text](./ScreenShots/image.png)
+![alt text](./ScreenShots/image-1.png)
