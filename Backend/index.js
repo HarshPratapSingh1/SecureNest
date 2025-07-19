@@ -18,8 +18,22 @@ connectDB();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  'https://securenesttt.netlify.app',
+  'http://localhost:5173'
+];
+
 app.use(cors({
-  origin: 'https://securenesttt.netlify.app',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 app.use(express.static('public'));
