@@ -1,0 +1,56 @@
+.index-body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #00ffff !important;
+  text-decoration: none;
+}
+
+.btn-custom {
+  background-color: #00ffff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
+}
+
+.hero-section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer a {
+  margin: 0 15px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+footer a:hover {
+  transform: scale(1.2);
+}
