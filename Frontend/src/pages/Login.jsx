@@ -52,7 +52,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://securenesttt.netlify.app/login", {
+      const res = await fetch("https://securenest-t72z.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
