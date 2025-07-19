@@ -13,7 +13,6 @@ router.post('/register', async (req, res) => {
 
   try {
     // Check if user exists
-    console.log(username+" "+email+" "+password);
     const existingUser = await User.findOne({ $or: [{ email }, { username }] });
     if (existingUser) {
       return res.status(400).json({ message: 'User already exists with this email or username' });
@@ -75,7 +74,7 @@ router.post('/login', async (req, res) => {
 
 router.get("/profile", (req, res) => {
   const token = req.cookies.token;
-    console.log(token);
+
   if (!token) {
     return res.status(402).json({ message: "Unauthorized" });
   }
