@@ -17,7 +17,7 @@ function Home() {
           method: "GET",
           credentials: "include",
         });
-
+        console.log(res);
         if (res.status === 401) {
           navigate("/login");
         } else if (res.ok) {

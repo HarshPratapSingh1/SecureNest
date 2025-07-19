@@ -59,11 +59,11 @@ router.post('/login', async (req, res) => {
     const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
 
     // Set cookie
-    res.cookie('token', token, {
+    res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: 24 * 60 * 60 * 1000,
+      secure: true,         // required for cross-site cookies (HTTPS)
+      sameSite: "None",     // required for cross-site cookies
+      maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
     res.json({ message: 'Login successful!' });
@@ -75,7 +75,7 @@ router.post('/login', async (req, res) => {
 
 router.get("/profile", (req, res) => {
   const token = req.cookies.token;
-
+    console.log(token);
   if (!token) {
     return res.status(402).json({ message: "Unauthorized" });
   }
