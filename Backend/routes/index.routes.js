@@ -1,41 +1,41 @@
 const express = require('express');
 const isAuth = require('../middleware/auth');
 const User = require('../models/user.model');
-const { body, validationResult } = require('express-validator');
 
 const router = express.Router();
 
-// Landing page (public)
+// Landing page (public) — let React handle it
 router.get('/', (req, res) => {
-  res.render('index');
+  res.send('Welcome to the landing page. React will handle routing.');
 });
 
-// Home (protected)
+// Home (protected) — send user data to React
 router.get('/home', isAuth, async (req, res) => {
   try {
     const user = await User.findById(req.user.userId);
-    if (!user) return res.status(404).send('User not found');
+    if (!user) return res.status(404).json({ message: 'User not found' });
 
-    res.render('home', { user });
+    res.json({ user });
   } catch (err) {
     console.error('Error fetching user:', err);
-    res.status(500).send('Server Error');
+    res.status(500).json({ message: 'Server error' });
   }
 });
 
-// My Gallery (protected)
+// My Gallery (protected) — return uploaded image data
 router.get('/mygallery', isAuth, async (req, res) => {
   try {
     const user = await User.findById(req.user.userId);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
-    // Send uploaded image URLs only
     res.json(user.uploads || []);
   } catch (err) {
     console.error('Failed to fetch user uploads:', err);
     res.status(500).json({ message: 'Server error' });
   }
 });
+
+// Delete image by URL (protected)
 router.delete('/delete', isAuth, async (req, res) => {
   try {
     const { url } = req.query;
@@ -53,6 +53,5 @@ router.delete('/delete', isAuth, async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
 
 module.exports = router;
