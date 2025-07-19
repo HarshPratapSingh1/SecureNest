@@ -71,13 +71,17 @@ Harsh Pratap Singh
 ## 📷 Screenshots
 
 ### 📝 Register  
-![Register](screenshots/register.png)
+
+![Register](./screenshots/register.png)
 
 ### 🔐 Login  
-![Login](screenshots/login.png)
+
+![Login](./screenshots/login.png)
 
 ### 🏠 Home  
-![Home](screenshots/home.png)
+
+![Home](./screenshots/home.png)
 
 ### 🖼️ My Gallery  
-![My Gallery](screenshots/mygal.png)
+
+![My Gallery](./screenshots/mygal.png)
